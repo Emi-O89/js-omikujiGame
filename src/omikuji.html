@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .omikuji_btn {
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        box-shadow: 1px 1px 0px 0px rgb(201, 201, 201);
+        border-radius: 50%;
+        margin-top: 120px;
+        color: #fff;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="" method="">
+      <input
+        type="button"
+        value="おみくじを引く"
+        class="omikuji_btn"
+        onClick="playOmikuji()"
+      />
+    </form>
+
+    <script>
+      function playOmikuji() {
+        let result_num = Math.floor(Math.random() * 6);
+
+        let result_text;
+        switch (result_num) {
+          case 0:
+            result_text = "大吉";
+            break;
+
+          case 1:
+          case 2:
+            result_text = "中吉";
+            break;
+
+          case 3:
+          case 4:
+            result_text = "小吉";
+            break;
+
+          case 5:
+            result_text = "凶";
+            break;
+        }
+
+        alert(`${result_text}です。`);
+      }
+    </script>
+  </body>
+</html>
